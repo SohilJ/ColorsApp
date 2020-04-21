@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+body {
+
+
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    
+
+}
+
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 50;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+    
+    
+
+}
+
+
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgb(122, 122, 122);
+}
+
+.btn-white {
+    background-color: rgba(255, 255, 255, 0.493);
+    color: rgb(0, 0, 0);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: rgba(255, 255, 255, 0.692);
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.colors {
+
+    color: rgb(197, 197, 197);
+    position: absolute;
+    top: 0;
+    margin-top: 175px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.footer {
+
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    
+    
+}
